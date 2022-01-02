@@ -15,7 +15,7 @@ function App() {
 
     return (
         <div className="App">
-            <Form setValues={setCity} />
+            <Form setCity={setCity} />
             {
                 loading
                     ? <Loader />

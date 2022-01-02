@@ -13,7 +13,6 @@ export const useWeather = ({ city, apiKey }) => {
             setError(false);
             axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
                 .then(response => {
-                    console.log(response);
                     setResult(response);
                 })
                 .catch(error => {
