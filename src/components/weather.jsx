@@ -6,12 +6,12 @@ export const Weather = ({ result }) => {
         const { name, sys, main, weather } = result.data;
         return (
             <Box bgcolor={"rgb(255, 193, 58)"} py={3}>
-                <h2>{name}, {sys.country}</h2>
+                <h2>City: {name}, Country: {sys.country}</h2>
                 <img src={`https://openweathermap.org/img/wn/${weather[0].icon}.png`} alt="icon" />
                 <Box mx={2} fontSize={40}>
-                    {Math.floor(main.temp - 273.25)}&deg;
+                    Temp: {Math.floor(main.temp - 273.25)}&deg;
                 </Box>
-                <p>{weather[0].description}</p>
+                <p>Status: {weather[0].description}</p>
             </Box>
         )
     } else {
