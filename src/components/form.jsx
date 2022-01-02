@@ -4,14 +4,14 @@ import TextField from '@material-ui/core/TextField';
 import { useFormik } from 'formik';
 import { Box } from '@material-ui/core';
 
-export const Form = ({ setValues }) => {
+export const Form = ({ setCity }) => {
 
     const formik = useFormik({
         initialValues: {
             city: '',
         },
         onSubmit: values => {
-            setValues({ city: values.city });
+            setCity(values.city);
         },
     });
 

@@ -6,16 +6,16 @@ import { Loader } from './components/loader';
 import { Error } from './components/error';
 import './App.css';
 
-const API_KEY = "f7b8f95cae99a3ebda8f440ac2d1d983";
+const apiKey = "f7b8f95cae99a3ebda8f440ac2d1d983";
 
 function App() {
 
-    const [getValues, setValues] = useState(null);
-    const [result, loading, error] = useWeather({ ...getValues, apiKey: API_KEY });
+    const [city, setCity] = useState(null);
+    const [result, loading, error] = useWeather({ city, apiKey });
 
     return (
         <div className="App">
-            <Form setValues={setValues} />
+            <Form setValues={setCity} />
             {
                 loading
                     ? <Loader />
