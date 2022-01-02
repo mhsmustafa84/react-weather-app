@@ -32,7 +32,7 @@ export const Form = ({ setCity }) => {
                     />
                 </Box>
                 <Box my={2}>
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button variant="contained" color="primary" type="submit" disabled={!values.city}>
                         Get Weather
                     </Button>
                 </Box>
